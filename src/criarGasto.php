@@ -20,9 +20,9 @@ $pessoas = $pdo->query("SELECT * FROM pessoa")->fetchAll(PDO::FETCH_ASSOC);
 
         <label>Dono do Gasto</label>
         <select name="pessoa">
-            <?php foreach ($pessoas as $cat): ?>
-                <option value="<?php echo $cat["nome"];?>">
-                    <?php echo htmlspecialchars($cat["nome"]); ?>
+            <?php foreach ($pessoas as $pessoa): ?>
+                <option value="<?php echo $pessoa["nome"];?>">
+                    <?php echo htmlspecialchars($pessoa["nome"]); ?>
                 </option>
             <?php endforeach; ?>
         </select>
